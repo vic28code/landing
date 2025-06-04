@@ -14,15 +14,21 @@ const showToast = () => {
 };
 
 /**
- * Muestra un video en pantalla.
- * Esta función es un ejemplo y debe implementarse según la lógica de la aplicación.
+ * Asigna un evento click al elemento con ID 'demo' para abrir un video de YouTube en una nueva pestaña.
  * @function
  * @returns {void}
  */
 const showVideo = () => {
-    // Lógica para mostrar un video (implementar según necesidades)
+    const demoBtn = document.getElementById("demo");
+    if (demoBtn) {
+        demoBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+        });
+    }
 };
 
 (() => {
     showToast();
+    showVideo();
 })();
