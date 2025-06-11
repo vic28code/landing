@@ -94,9 +94,7 @@
         responsivo.
       </p>
       <div id="container-02" class="mt-8 flex justify-center gap-4">
-        <button id="start" class="inline-block px-6 py-3 text-white bg-blue-600 rounded-lg">Comenzar</button>
-        <button id="demo"
-          class="inline-block px-6 py-3 border border-gray-300 text-gray-700 rounded-lg dark:border-gray-600 dark:text-white">
+        <button id="demo" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
           Ver demo
         </button>
       </div>
@@ -120,9 +118,50 @@
         </div>
       </div>
     </section>
+    <!-- Sección para mostrar datos de Faker -->
+    <section id="faker-section" class="bg-white dark:bg-gray-900 mt-12">
+      <div class="max-w-xl mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Datos generados con Faker</h2>
+        <div id="faker-data" class="space-y-4">
+          <!-- Aquí se insertarán los datos de la API de Faker -->
+        </div>
+        <button id="faker-refresh" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+          Generar nuevos datos
+        </button>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script type="module" src="file01.js"></script>
+
+    <section class="bg-slate-50 dark:bg-gray-900"> ... </section>
+
+    <section class="flex flex-col items-center justify-center bg-white py-8">
+      <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Vota por tu producto preferido</h2>
+
+        <div class="mb-6">
+          <form id="form_voting" class="relative flex items-center">
+            <select id="select_product"
+              class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="" disabled selected>Seleccione un producto</option>
+              <option value="product1">Producto 1</option>
+              <option value="product2">Producto 2</option>
+              <option value="product3">Producto 3</option>
+            </select>
+            <button
+              class="ml-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+              VOTAR
+            </button>
+          </form>
+        </div>
+
+        <div id="results" class="border border-gray-300 rounded-lg h-52 w-full p-2 bg-gray-50">
+          <p class="text-gray-500 text-center mt-16">Resultado de la votación</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-  <script type="module" src="file01.js"></script>
 </body>
 
 </html>
